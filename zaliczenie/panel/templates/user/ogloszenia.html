@@ -1,0 +1,27 @@
+{% extends "user/master.html" %}
+
+{% block title %}
+Ogłoszenia
+{% endblock %}
+
+
+{% block content %}
+  <h1>Ogłoszenia:</h1>
+
+{% if ogloszenia %}
+  <ul class="ogloszenia-list">
+    {% for ogloszenie in ogloszenia %}
+    <div class = "content-container">
+      <li class="ogloszenie-item">
+        <h2 class="ogloszenie-title">{{ ogloszenie.tytul }}</h2>
+        <p class="ogloszenie-content">{{ ogloszenie.tresc }}</p>
+        <p class="ogloszenie-date">Data: {{ ogloszenie.data }}</p>
+      </li>
+    </div>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Brak dostępnych ogłoszeń</p>
+{% endif %}
+
+{% endblock %}

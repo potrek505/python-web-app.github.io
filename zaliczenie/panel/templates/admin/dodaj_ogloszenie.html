@@ -1,0 +1,16 @@
+{% extends "admin/admin.html" %}
+
+{% block title %}
+Dodaj ogłoszenie
+{% endblock %}
+
+{% block content %}
+<div class = "content-container">
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Dodaj ogłoszenie</button>
+</form>
+</div>
+{% endblock %}

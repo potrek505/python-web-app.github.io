@@ -1,0 +1,23 @@
+{% extends "user/master.html" %}
+
+{% block title %}
+Faktury
+{% endblock %}
+
+{% block content %}
+  <h1>Faktury:</h1>
+
+  {% if moje_faktury %}
+    <ul class="invoice-list">
+      {% for faktura in moje_faktury %}
+      <div class="content-container">
+        <li class="invoice-item">
+          <span class="invoice-number">{{ faktura }}</span>
+        </li>
+      </div>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Brak dostępnych faktur</p>
+  {% endif %}
+{% endblock %}

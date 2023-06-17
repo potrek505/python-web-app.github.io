@@ -1,0 +1,20 @@
+{% extends "admin/admin.html" %}
+
+{% block title %}
+Usuń element
+{% endblock %}
+
+{% block content %}
+<div class = "content-container">
+
+<h1>Usuń</h1>
+
+<p>Czy na pewno chcesz usunąć element: {{ element }}?</p>
+
+<form action="" method="post">
+{% csrf_token %}
+<input type="submit" value="Usuń">
+
+</form>
+</div>
+{% endblock %}

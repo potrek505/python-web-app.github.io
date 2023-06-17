@@ -1,0 +1,19 @@
+{% extends "admin/admin.html" %}
+
+{% block title %}
+Panel zarządzania
+{% endblock %}
+
+{% block content %}
+  <h2>Lista użytkowników:</h2>
+  <ul class="user-list">
+    {% for user in users %}
+    <div class = "content-container">
+      <li class="user-item">
+        <a href="{% url 'szczegoly_uzytkownika' user.id %}" class="user-link">{{ user.username }}</a>
+        <span class="user-name">{{ user.imie }} {{ user.nazwisko }}</span>
+      </li>
+    </div>
+    {% endfor %}
+  </ul>
+{% endblock %}

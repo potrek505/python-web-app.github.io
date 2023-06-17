@@ -1,0 +1,16 @@
+{% extends 'admin/admin.html' %}
+
+{% block title %}
+Dodaj fakture
+{% endblock %}
+
+{% block content %}
+<div class = "content-container">
+
+  <form method="POST" action="{% url 'dodaj_fakture' %}" class="invoice-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="submit-button">Dodaj fakturę</button>
+  </form>
+</div>
+{% endblock %}

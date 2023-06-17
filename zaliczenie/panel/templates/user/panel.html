@@ -1,0 +1,13 @@
+{% extends "user/master.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+  <div class="content-container">
+    <h2>Witaj, {{ user.imie }} {{ user.nazwisko }} w panelu mieszkańca Osiedla Praga!</h2>
+    <p>Za pomocą zakładki "Ogłoszenia" na górze strony od dziś możesz sprawdzić wszystkie ogłoszenia dotyczące twojego osiedla!</p>
+    <p>W zakładce "Faktury" znajdziesz wszystkie potrzebne informacje, na temat każdej faktury, którą otrzymasz!</p>
+  </div>
+{% endblock %}

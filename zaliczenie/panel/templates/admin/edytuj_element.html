@@ -1,0 +1,18 @@
+{% extends "admin/admin.html" %}
+
+{% block title %}
+Edytuj element
+{% endblock %}
+
+{% block content %}
+<div class = "content-container">
+
+  <h1>Edytuj:</h1>
+
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+</div>
+{% endblock %}

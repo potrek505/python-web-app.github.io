@@ -1,0 +1,19 @@
+{% extends "user/master.html" %}
+
+{% block title %}
+Mój profil
+{% endblock %}
+
+{% block content %}
+  <div class="user-profile">
+    <h2>{{ user.username }}</h2>
+    <div class="user-details">
+      <p><strong>Imię:</strong> {{ user.imie }}</p>
+      <p><strong>Nazwisko:</strong> {{ user.nazwisko }}</p>
+      <p><strong>Adres:</strong> {{ user.adres }}</p>
+      <p><strong>Nr telefonu:</strong> {{ user.nr_telefonu }}</p>
+      <p><strong>Email:</strong> {{ user.adres_email }}</p>
+    </div>
+    <a href="{% url 'edytuj_uzytkownika' user.id %}" class="user-action">Edytuj</a>
+  </div>
+{% endblock %}
